@@ -1,0 +1,170 @@
+@import 'normalize.css';
+
+:root {
+    --primary-color: #fe2c55;
+    --text-color: #333;
+    --primary-boxshadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    --box-boxshadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --tooltip-boxshadow: rgb(0 0 0 / 12%) 0 2px 12px;
+    --font-family: 'SF', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: rgb(250, 250, 250);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    overflow-y: overlay;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #dddfe2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+// SP pro
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Black.otf');
+    font-weight: 900;
+}
+
+// @font-face {
+// 	font-family: SF;
+// 	src: url('/assets/fonts/SF-Pro-Display-BlackItalic.otf');
+// 	font-weight: 900;
+// }
+
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Bold.otf');
+    font-weight: 700;
+}
+
+// @font-face {
+// 	font-family: SF;
+// 	src: url('/assets/fonts/SF-Pro-Display-BoldItalic.otf');
+// 	font-weight: 700;
+// }
+
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Heavy.otf');
+    font-weight: 900;
+}
+
+// @font-face {
+// 	font-family: SF;
+// 	src: url('/assets/fonts/SF-Pro-Display-HeavyItalic.otf');
+// 	font-weight: 900;
+// }
+
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Light.otf');
+    font-weight: 300;
+}
+
+// @font-face {
+// 	font-family: SF;
+// 	src: url('/assets/fonts/SF-Pro-Display-LightItalic.otf');
+// 	font-weight: 300;
+// }
+
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Medium.otf');
+    font-weight: 500;
+}
+
+// @font-face {
+// 	font-family: SF;
+// 	src: url('/assets/fonts/SF-Pro-Display-MediumItalic.otf');
+// 	font-weight: 500;
+// }
+
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Regular.otf');
+    font-weight: 400;
+}
+
+// @font-face {
+// 	font-family: SF;
+// 	src: url('/assets/fonts/SF-Pro-Display-RegularItalic.otf');
+// 	font-weight: 400;
+// }
+
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Semibold.otf');
+    font-weight: 600;
+}
+
+// @font-face {
+// 	font-family: SF;
+// 	src: url('/assets/fonts/SF-Pro-Display-SemiboldItalic.otf');
+// 	font-weight: 600;
+// }
+
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Thin.otf');
+    font-weight: 100;
+}
+
+// @font-face {
+// 	font-family: SF;
+// 	src: url('/assets/fonts/SF-Pro-Display-ThinItalic.otf');
+// 	font-weight: 100;
+// }
+
+@font-face {
+    font-family: SF;
+    src: url('/assets/fonts/SF-Pro-Display-Ultralight.otf');
+    font-weight: 200;
+}
