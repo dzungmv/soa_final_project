@@ -1,9 +1,11 @@
 import Home from '~/pages/Home/Home';
-import Login from '~/pages/Login';
+import SignIn from '~/pages/Auth/SignIn';
+import SignUp from '~/pages/Auth/SignUp';
 
 const publicRoutes = [
     { path: '/', component: Home },
-    { path: '/login', component: Login, layout: null },
+    { path: '/login', component: SignIn, layout: null },
+    { path: '/register', component: SignUp, layout: null },
 ];
 
 export { publicRoutes };
