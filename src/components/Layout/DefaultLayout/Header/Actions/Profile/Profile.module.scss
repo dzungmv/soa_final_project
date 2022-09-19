@@ -1,0 +1,76 @@
+.wrapper {
+    .avatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+}
+
+.tooltip {
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: var(--tooltip-boxshadow);
+    margin-top: 8px;
+    .tooltip-container {
+        padding: 8px;
+        .tooltip-item {
+            padding: 8px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(22, 24, 35, 0.07);
+            }
+
+            .tooltip-item__label {
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: var(--text-color);
+                margin-left: 4px;
+            }
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin-bottom: 8px;
+
+            .avatar {
+                width: 37px;
+                height: 37px;
+                border-radius: 50%;
+                object-fit: cover;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+
+                .name {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                }
+
+                .id {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.3rem;
+                    margin-top: -3px;
+                    .id__name {
+                        margin-left: 4px;
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+}

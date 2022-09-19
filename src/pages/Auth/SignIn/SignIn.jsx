@@ -3,6 +3,8 @@ import styles from './SignIn.module.scss';
 import { Link } from 'react-router-dom';
 
 import login from '~/assets/images/login.jpg';
+import facebookIcon from '~/assets/icons/facebook.png';
+import googleIcon from '~/assets/icons/google.png';
 
 const cx = classNames.bind(styles);
 
@@ -36,16 +38,51 @@ function SignIn() {
                             Sign in
                         </button>
 
-                        <Link>
+                        <Link to='/forgot-password'>
                             <span className={cx('forgot-password')}>
                                 Forgot password?
                             </span>
                         </Link>
 
-                        <hr />
+                        <div className={cx('hr')}>
+                            <div className={cx('hr-custom')}>
+                                <span className={cx('hr-custom__title')}>
+                                    Or sign in with
+                                </span>
+                            </div>
+                        </div>
 
                         <div className={cx('form__footer')}>
-                            <span></span>
+                            <div className={cx('form__footer-container')}>
+                                <img
+                                    className={cx(
+                                        'form__footer-icon',
+                                        'facebook'
+                                    )}
+                                    src={facebookIcon}
+                                    alt='facebook'
+                                />
+                                <img
+                                    className={cx(
+                                        'form__footer-icon',
+                                        'google'
+                                    )}
+                                    src={googleIcon}
+                                    alt='google'
+                                />
+                            </div>
+                        </div>
+
+                        <div className={cx('register')}>
+                            <span>
+                                New to PlayerDual?
+                                <Link
+                                    className={cx('resgister__direct')}
+                                    to='/register'
+                                >
+                                    Create an account.
+                                </Link>
+                            </span>
                         </div>
                     </div>
                 </div>
