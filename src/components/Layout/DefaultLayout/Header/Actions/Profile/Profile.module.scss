@@ -9,13 +9,9 @@
 }
 
 .tooltip {
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-    box-shadow: var(--tooltip-boxshadow);
-    margin-top: 8px;
     .tooltip-container {
-        padding: 8px;
+        width: 300px;
+        padding: 8px 0;
         .tooltip-item {
             padding: 8px;
             border-radius: 8px;

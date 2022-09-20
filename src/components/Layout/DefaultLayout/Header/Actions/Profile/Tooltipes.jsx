@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 
 import styles from './Profile.module.scss';
@@ -6,12 +7,6 @@ import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 
 function Tooltipes() {
-    // const navigate = useNavigate();
-
-    // const handleLogout = () => {
-    //     navigate('/login');
-    // };
-
     return (
         <div className={cx('tooltip')}>
             <div className={cx('tooltip-container')}>
@@ -51,13 +46,19 @@ function Tooltipes() {
                 </div>
 
                 <hr />
-
-                <div className={cx('tooltip-item')}>
-                    <i
-                        className={cx('fa-regular', 'fa-right-from-bracket')}
-                    ></i>
-                    <span className={cx('tooltip-item__label')}>Log out</span>
-                </div>
+                <Link to='/login'>
+                    <div className={cx('tooltip-item')}>
+                        <i
+                            className={cx(
+                                'fa-regular',
+                                'fa-right-from-bracket'
+                            )}
+                        ></i>
+                        <span className={cx('tooltip-item__label')}>
+                            Log out
+                        </span>
+                    </div>
+                </Link>
             </div>
         </div>
     );

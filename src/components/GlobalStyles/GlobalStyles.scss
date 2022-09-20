@@ -168,3 +168,9 @@ a {
     src: url('/assets/fonts/SF-Pro-Display-Ultralight.otf');
     font-weight: 200;
 }
+
+// Custom tippy
+.tippy-box {
+    border-radius: 8px;
+    font-family: var(--font-family);
+}
