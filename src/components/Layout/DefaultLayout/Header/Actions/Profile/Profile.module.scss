@@ -1,4 +1,24 @@
 .wrapper {
+    display: flex;
+    align-items: center;
+
+    .action__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background-color: rgba(22, 24, 35, 0.08);
+        font-size: 1.8rem;
+
+        &:hover {
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+    }
+
     .avatar {
         width: 38px;
         height: 38px;
@@ -17,6 +37,7 @@
             border-radius: 8px;
             display: flex;
             align-items: center;
+            font-size: 1.6rem;
 
             &:hover {
                 cursor: pointer;
@@ -24,7 +45,6 @@
             }
 
             .tooltip-item__label {
-                font-size: 1.4rem;
                 font-weight: 500;
                 color: var(--text-color);
                 margin-left: 4px;

@@ -7,24 +7,26 @@ import 'tippy.js/themes/light.css';
 import Image from '~/components/Image';
 import styles from './Profile.module.scss';
 import Tooltipes from './Tooltipes';
+import NoticationTT from './NotificationTT';
 
 const cx = classNames.bind(styles);
 
 function Profile() {
     return (
         <div className={cx('wrapper')}>
-            {/* <Tooltip
+            <Tippy
+                content={<NoticationTT />}
                 trigger='click'
+                placement='bottom-start'
                 interactive
-                position='bottom-start'
-                html={<Tooltipes />}
+                arrow
+                animation='scale'
+                theme='light'
             >
-                <Image className={cx('avatar')} src='' />
-            </Tooltip> */}
-
-            {/* <Menu items={MENU_ITEMS}>
-                <Image className={cx('avatar')} src='' />
-            </Menu> */}
+                <div className={cx('action__item')}>
+                    <i className={cx('fa-light', 'fa-bell')}></i>
+                </div>
+            </Tippy>
 
             <Tippy
                 content={<Tooltipes />}

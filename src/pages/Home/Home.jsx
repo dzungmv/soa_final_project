@@ -1,6 +1,6 @@
 function Home() {
     return (
-        <div style={{ height: 1500 }}>
+        <div>
             <h1>This home page</h1>
         </div>
     );
