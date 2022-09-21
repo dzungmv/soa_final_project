@@ -1,7 +1,17 @@
+import classNames from 'classnames/bind';
+
+import styles from './Home.module.scss';
+import Sidebar from './Sidebar';
+
+const cx = classNames.bind(styles);
+
 function Home() {
     return (
-        <div style={{ height: 1500 }}>
-            <h1>This home page</h1>
+        <div className={cx('wrapper')}>
+            <div className={cx('side-bar')}>
+                <Sidebar />
+            </div>
+            <div className={cx('container')}></div>
         </div>
     );
 }

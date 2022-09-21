@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    margin-top: 60px;
+    padding: 0 25px;
+
+    .side-bar {
+        flex: 1 0 20%;
+    }
+
+    .container {
+        flex: 2 0 80%;
+    }
+}
