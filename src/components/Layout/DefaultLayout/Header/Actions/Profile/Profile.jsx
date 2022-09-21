@@ -17,9 +17,9 @@ function Profile() {
             <Tippy
                 content={<NoticationTT />}
                 trigger='click'
-                placement='bottom-start'
+                placement='bottom'
                 interactive
-                arrow
+                arrow={false}
                 animation='scale'
                 theme='light'
             >

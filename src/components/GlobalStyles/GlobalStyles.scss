@@ -170,7 +170,24 @@ a {
 }
 
 // Custom tippy
-.tippy-box {
-    border-radius: 8px;
-    font-family: var(--font-family);
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-size: 1.6rem;
+        line-height: 22px;
+        background-color: rgba(84, 84, 84, 0.92);
+        max-width: 500px !important;
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+        top: -8px;
+    }
 }
