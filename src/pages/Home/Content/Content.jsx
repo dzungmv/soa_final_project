@@ -1,19 +1,22 @@
 import classNames from 'classnames/bind';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/controller';
-
-// import required modules
-import { A11y, Navigation, Pagination, Mousewheel, Keyboard } from 'swiper';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 
 import styles from './Content.module.scss';
+import slide1 from '~/assets/images/slide1.jpeg';
+import slide2 from '~/assets/images/slide2.jpg';
 
 const cx = classNames.bind(styles);
+const slides = [
+    { id: 1, image: slide1 },
+    {
+        id: 2,
+        image: slide2,
+    },
+];
 
 function Content() {
     return (
@@ -21,29 +24,29 @@ function Content() {
             <div className={cx('slider')}>
                 <Swiper
                     cssMode={true}
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 4500,
+                        disableOnInteraction: true,
+                    }}
                     navigation={true}
-                    pagination={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Autoplay, Pagination, Navigation]}
                     mousewheel={true}
                     keyboard={true}
                     loop={true}
-                    modules={[
-                        Navigation,
-                        Pagination,
-                        Mousewheel,
-                        Keyboard,
-                        A11y,
-                    ]}
-                    className={cx('swiper')}
+                    className={cx('swiper-content')}
                 >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    <SwiperSlide>Slide 5</SwiperSlide>
-                    <SwiperSlide>Slide 6</SwiperSlide>
-                    <SwiperSlide>Slide 7</SwiperSlide>
-                    <SwiperSlide>Slide 8</SwiperSlide>
-                    <SwiperSlide>Slide 9</SwiperSlide>
+                    {slides.map((data) => {
+                        return (
+                            <SwiperSlide key={data.id}>
+                                <img src={data.image} alt='' />
+                            </SwiperSlide>
+                        );
+                    })}
                 </Swiper>
             </div>
         </div>

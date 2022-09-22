@@ -194,31 +194,110 @@ body {
 
 body {
     .swiper {
-        width: 100px;
-    }
-    .swiper-container {
-        height: 100%;
-        max-height: 100vw;
-        // CSS Grid/Flexbox bug size workaround
-        // @see https://github.com/kenwheeler/slick/issues/982
-        min-height: 0;
-        min-width: 0;
-        max-width: 100vw;
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
         overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1 !important;
     }
 
     .swiper-slide {
-        width: auto;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
         flex-shrink: 0;
-        display: block;
+        width: 100%;
         height: 100%;
-        max-height: 100%;
+        position: relative;
+        transition-property: transform;
     }
 
-    .swiper-wrapper {
-        max-height: 100%;
-        height: 100%t;
-        display: flex;
+    .swiper-button-prev {
+        font-size: 1rem !important;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 55%;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 1px solid var(--primary-color);
+        border-radius: 50%;
+        color: var(--primary-color);
+        font-weight: 700;
+        outline: 0;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        background-color: transparent;
+
+        &::after {
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+    }
+
+    .swiper-button-prev {
+        &:after {
+            position: relative;
+            left: -1px;
+        }
+    }
+
+    .swiper-button-next {
+        &:after {
+            position: relative;
+            left: 1px;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        left: 10px;
+        right: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+        right: 10px;
+        left: auto;
+    }
+
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+        opacity: 0;
+        cursor: auto;
+        pointer-events: none;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--primary-color);
     }
 }
