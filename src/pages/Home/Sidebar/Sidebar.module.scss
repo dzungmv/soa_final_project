@@ -1,5 +1,8 @@
 .wrapper {
     padding: 16px 0;
+    position: fixed;
+    width: 20%;
+    max-width: inherit;
 
     .title {
         font-size: 2rem;

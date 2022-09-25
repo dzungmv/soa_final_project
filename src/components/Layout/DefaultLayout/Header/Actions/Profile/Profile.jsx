@@ -7,7 +7,7 @@ import 'tippy.js/themes/light.css';
 import Image from '~/components/Image';
 import styles from './Profile.module.scss';
 import Tooltipes from './Tooltipes';
-import NoticationTT from './NotificationTT';
+import Notications from './Notifications';
 
 const cx = classNames.bind(styles);
 
@@ -15,7 +15,7 @@ function Profile() {
     return (
         <div className={cx('wrapper')}>
             <Tippy
-                content={<NoticationTT />}
+                content={<Notications />}
                 trigger='click'
                 placement='bottom'
                 interactive
