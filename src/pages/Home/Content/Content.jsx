@@ -20,10 +20,10 @@ function Content() {
                             <option value='female'>Female</option>
                         </select>
                     </div>
-
-                    <PlayerCard />
                 </div>
             </div>
+
+            <PlayerCard />
         </div>
     );
 }

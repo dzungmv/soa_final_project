@@ -2,6 +2,14 @@
     display: flex;
     margin-top: 60px;
     padding: 0 25px;
+    background-color: rgb(255, 255, 255);
+
+    .global-chat {
+        position: fixed;
+        z-index: 100;
+        right: 60px;
+        bottom: 50px;
+    }
 
     .side-bar {
         flex: 1 0 20%;
