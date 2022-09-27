@@ -1,15 +1,11 @@
 import { useState } from 'react';
-import {
-    COffcanvas,
-    COffcanvasHeader,
-    COffcanvasTitle,
-    CCloseButton,
-    COffcanvasBody,
-} from '@coreui/react';
+import { COffcanvas, COffcanvasBody } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 import Tippy from '@tippyjs/react';
 
 import classNames from 'classnames/bind';
+import Image from '~/components/Image';
+import fake_data from './chat-data.json';
 
 import styles from './GlobalChat.module.scss';
 
@@ -37,11 +33,32 @@ function GlobalChat() {
                 onHide={() => setVisible(false)}
             >
                 <div className={cx('header')}>
-                    <span className={cx('title')}>Title</span>
+                    <div className={cx('title')}>Chats Global</div>
+                    <div
+                        className={cx('close-btn')}
+                        onClick={() => setVisible(false)}
+                    >
+                        <i className={cx('fa-regular', 'fa-xmark')}></i>
+                    </div>
                 </div>
                 <COffcanvasBody>
-                    Content for the offcanvas goes here. You can place just
-                    about any Bootstrap component or custom elements here.
+                    <div className={cx('mess')}>
+                        {fake_data.map((data) => {
+                            return (
+                                <div key={data.id} className={cx('mess-item')}>
+                                    <div className={cx('info__avatar')}>
+                                        <Image src='' />
+                                    </div>
+                                    <div className={cx('content')}>
+                                        <span className={cx('player__name')}>
+                                            {data.name}
+                                        </span>
+                                        : {data.content}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </COffcanvasBody>
             </COffcanvas>
         </div>

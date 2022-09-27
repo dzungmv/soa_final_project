@@ -9,26 +9,77 @@
         border-radius: 50%;
         border: 1px solid var(--primary-color);
         font-size: 4rem;
-        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-            rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-
-        div {
-            color: linear-gradient(
-                rgb(255, 143, 178) 0%,
-                rgb(167, 151, 255) 50%,
-                rgb(0, 229, 255) 100%
-            );
-        }
+        color: var(--primary-color);
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
         &:hover {
             cursor: pointer;
             background-color: rgba(0, 0, 0, 0.2);
         }
     }
+}
 
-    .header {
-        .title {
-            font-size: 4rem;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .title {
+        color: var(--primary-color);
+        font-size: 2.2rem;
+        font-weight: 500;
+        display: block;
+    }
+
+    .close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        color: rgba(22, 24, 35, 0.4);
+        right: 10px;
+        border-radius: 50%;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(22, 24, 35, 0.1);
+        }
+    }
+}
+
+.mess {
+    .mess-item {
+        display: flex;
+        font-family: (--font-family);
+        word-spacing: 0.2rem;
+        margin-bottom: 8px;
+
+        .info__avatar {
+            img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 8px;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            .player__name {
+                font-weight: 600;
+                color: var(--primary-color);
+            }
         }
     }
 }
