@@ -51,6 +51,12 @@
             }
         }
 
+        .tooltip-item__logout {
+            &:hover {
+                color: #333;
+            }
+        }
+
         .profile {
             display: flex;
             align-items: center;

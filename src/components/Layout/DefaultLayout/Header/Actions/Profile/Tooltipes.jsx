@@ -47,7 +47,7 @@ function Tooltipes() {
 
                 <hr />
                 <Link to='/login'>
-                    <div className={cx('tooltip-item')}>
+                    <div className={cx('tooltip-item', 'tooltip-item__logout')}>
                         <i
                             className={cx(
                                 'fa-regular',
