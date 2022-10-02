@@ -3,13 +3,17 @@
 
     .header {
         background-color: rgb(255, 255, 255);
-        padding-bottom: 40px;
         border-bottom: 1px solid rgba(22, 24, 35, 0.1);
         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
             rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
         .header__container {
             padding: 0 150px;
             position: relative;
+
+            hr {
+                width: calc(100% - 60px) !important;
+                border-top: 0.08rem solid rgba(22, 24, 35, 0.7);
+            }
             .cover__photo {
                 width: 100%;
                 height: 250px;
@@ -48,6 +52,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-bottom: 16px;
 
                 .info__left {
                     .name {
@@ -69,19 +74,21 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            width: 23px;
-                            height: 23px;
+                            width: 32px;
+                            height: 32px;
                             border-radius: 50%;
                             object-fit: cover;
-                            margin-right: 4px;
+                            margin-right: -5px;
+                            border: 1px solid #fff;
                             position: relative;
                         }
 
                         .game__play-image {
-                            width: 23px;
-                            height: 23px;
+                            width: 32px;
+                            height: 32px;
                             position: relative;
                             border-radius: 50%;
+                            border: 1px solid #fff;
                             background-size: cover;
                             background-position: center;
                             background-repeat: no-repeat;
@@ -177,6 +184,24 @@
                                 margin-right: 4px;
                             }
                         }
+                    }
+                }
+            }
+
+            .navigation {
+                padding: 8px 0 8px 30px;
+                display: flex;
+                align-items: center;
+
+                .navigation__item {
+                    padding: 12px;
+                    border-radius: 8px;
+                    margin-right: 8px;
+                    font-weight: 500;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgba(22, 24, 35, 0.1);
                     }
                 }
             }

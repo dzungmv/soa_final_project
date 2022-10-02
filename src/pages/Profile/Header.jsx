@@ -4,7 +4,7 @@ import styles from './Profile.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Header({ info_data }) {
+function Header({ info_data, exeScrollRating }) {
     return (
         <div className={cx('header')}>
             <div className={cx('header__container')}>
@@ -95,6 +95,16 @@ function Header({ info_data }) {
                                 Message
                             </div>
                         </div>
+                    </div>
+                </div>
+                <hr />
+                <div className={cx('navigation')}>
+                    <div className={cx('navigation__item')}>Introduction</div>
+                    <div
+                        className={cx('navigation__item')}
+                        onClick={exeScrollRating}
+                    >
+                        Rating
                     </div>
                 </div>
             </div>

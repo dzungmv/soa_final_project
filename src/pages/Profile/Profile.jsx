@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './Profile.module.scss';
@@ -25,25 +25,29 @@ const fake_data = {
         rose_avatar,
         rose_avatar,
         rose_avatar,
-        rose_avatar,
-        rose_avatar,
-        rose_avatar,
-        rose_avatar,
+        // rose_avatar,
+        // rose_avatar,
+        // rose_avatar,
+        // rose_avatar,
     ],
 };
 
 const name = fake_data.name;
-
-console.log(name);
+const useMouseEffect = (state) => useEffect(state, [state]);
 
 function Profile() {
+    //* Scroll to Rating
+    const ratingRef = useRef(null);
+    const exeScrollRating = () => ratingRef.current.scrollIntoView();
+    useMouseEffect(exeScrollRating);
+
     useEffect(() => {
         document.title = `${name}`;
     });
     return (
         <div className={cx('wrapper')}>
-            <Header info_data={fake_data} />
-            <BodyContent info_data={fake_data} />
+            <Header info_data={fake_data} exeScrollRating={exeScrollRating} />
+            <BodyContent info_data={fake_data} ratingRef={ratingRef} />
         </div>
     );
 }
